@@ -419,6 +419,10 @@ function getCommonElements(array1, array2) {
   // Пиши код выше этой строки
 }
 
+// В этой задаче цикл for должен иметь столько итераций, сколько элементов в массиве array1. 
+// С помощью выражения i < array1.length мы говорим: пока значение i будет меньше длины массива array1,
+// цикл должен выполнятся.Когда і достигнет значения длины массива array1, это будет означать, что все элементы массива перебраны и из цикла можно выходить.
+
 
 // Задача 26
 
@@ -470,8 +474,59 @@ const e = 8 % 6;
 
 // Задача 29
 
-
+function getEvenNumbers(start, end) {
+    // Пиши код ниже этой строки
+let evenNumbers = [];
+  for (let i = start; i <= end; i += 1){
+    if (i % 2 === 0) {
+      evenNumbers.push(i);
+    }
+  }
+  return evenNumbers;
+    // Пиши код выше этой строки
+  }
 
 // Задача 30
+
+const start = 6;
+const end = 27;
+let number;
+
+for (let i = start; i < end; i += 1) {
+  if (i % 5 === 0) {
+    number = i;
+    break;
+  }
+}
+
+
 // Задача 31
+
+function findNumber(start, end, divisor) {
+  // Пиши код ниже этой строки
+  let number;
+
+  for (let i = start; i < end; i += 1) {
+    if (i % divisor === 0) {
+      number = i;
+      return number;
+    }
+  }
+
+ 
+  // Пиши код выше этой строки
+}
+
+
 // Задача 32
+
+function includes(array, value) {
+  // Пиши код ниже этой строки
+for (let item of array) {
+  if(item === value) {
+    return true;
+  }
+} 
+  return false;  
+  // Пиши код выше этой строки
+}
