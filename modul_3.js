@@ -708,3 +708,23 @@ const atTheOldToad = {
   // Пиши код выше этой строки
 };
 
+
+addPotion(newPotion) {
+     for (const potion of this.potions) {
+      if (Object.values(potion).includes(newPotion.name)) {
+      return `Error! Potion ${newPotion.name} is already in your inventory!`;
+    }
+   }
+      this.potions.push(newPotion);
+  },
+  removePotion(potionName) {
+    let potionIndex = "";
+   for (const potion of this.potions) {
+   if(Object.values(potion).includes(potionName)){
+   potionIndex = this.potions.indexOf(potion);
+   this.potions.splice(potionIndex, 1);
+   return;
+   }
+   }
+    return `Potion ${potionName} is not in inventory!`;
+  },
